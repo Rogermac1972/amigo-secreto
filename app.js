@@ -6,17 +6,17 @@ function adicionarAmigo() {
   const input = document.getElementById('amigo');
   const nome = input.value.trim();
 
-  // Validar a entrada
+  // Valida a entrada
   if (nome === "") {
     alert("Por favor, insira um nome!.");
     return;
   }
 
-  // Atualizar o array de amigos e limpar o campo de entrada
+  // Atualiza o array de amigos e limpa o campo de entrada
   amigos.push(nome);
   input.value = "";
 
-  // Atualizar a lista de amigos no HTML
+  // Atualiza a lista de amigos no HTML
   atualizarListaAmigos();
 }
 
@@ -37,11 +37,11 @@ function sortearAmigo() {
     return;
   }
 
-  // Gerar um índice aleatório
+  // Gera um índice aleatório
   const indiceAleatorio = Math.floor(Math.random() * amigos.length);
   const amigoSorteado = amigos[indiceAleatorio];
 
-  // Mostrar o resultado do sorteio no HTML
+  // Mostra o resultado do sorteio no HTML
   const resultado = document.getElementById('resultado');
   resultado.innerHTML = `<li>${amigoSorteado}</li>`;
 }
